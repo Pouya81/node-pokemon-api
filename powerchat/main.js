@@ -6,6 +6,13 @@ var message = "";
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
+
+app.use(function(req, res, next) {
+    if (req.body.submit) console.log('Time: '+Date.now()+' Message '+req.body.mess);
+    else console.log('Time: '+Date.now()+' Message '+message);
+    next();
+})
+
 app.listen(port, () => console.log(`PowerChat is now running on : http://localhost:${port}`));
 
 app.get('/', (req,res) => res.send(struct));

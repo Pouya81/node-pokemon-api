@@ -1,0 +1,11 @@
+{
+  "name": "powerchat",
+  "version": "1.0.0",
+  "description": "The best chat software ever !",
+  "main": "main.js",
+  "scripts": {
+    "go": "nodemon main.js"
+  },
+  "author": "Pouya",
+  "license": "ISC"
+}
